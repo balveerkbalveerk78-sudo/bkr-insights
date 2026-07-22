@@ -1,7 +1,9 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB-Bw2xvgMOofsRZzsZWLOtm9iSegxbGWY4",
+  apiKey: "AIzaSyB-Bw2xvgM0ofsRZsZWL0tm9iSegxbGWY4",
   authDomain: "bkr-insights.firebaseapp.com",
   projectId: "bkr-insights",
   storageBucket: "bkr-insights.firebasestorage.app",
@@ -11,5 +13,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export const db = getFirestore(app);
 
 export default app;
